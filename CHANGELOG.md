@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/Brabodopedro/Projeto-ToDo-back/compare/v1.1.0...v1.1.1) (2025-06-08)
+
+
+### Bug Fixes
+
+* Adicionando a logica do Minha Conta com validacao no Back e no Front ([07eae73](https://github.com/Brabodopedro/Projeto-ToDo-back/commit/07eae73bf793c1c0dd1e4eb6c4326ee5d4eec779))
+
 # [1.1.0](https://github.com/Brabodopedro/Projeto-ToDo-back/compare/v1.0.0...v1.1.0) (2025-06-08)
 
 
