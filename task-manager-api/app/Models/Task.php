@@ -9,11 +9,7 @@ class Task extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'title',
-        'description',
-        'due_date',
-        'status',
-        'user_id',
+        'user_id', 'title', 'description', 'due_date', 'status',
     ];
 
     // A tarefa pertence a um usuário
