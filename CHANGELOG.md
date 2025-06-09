@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Brabodopedro/Projeto-ToDo-back/compare/v1.1.3...v1.2.0) (2025-06-09)
+
+
+### Features
+
+* Saubindo tables do banco somente para ver os dados q usei para teste. ([20b793c](https://github.com/Brabodopedro/Projeto-ToDo-back/commit/20b793c6d532622bc6171f6f06e2488c07a2206c))
+
 ## [1.1.3](https://github.com/Brabodopedro/Projeto-ToDo-back/compare/v1.1.2...v1.1.3) (2025-06-09)
 
 
