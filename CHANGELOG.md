@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/Brabodopedro/Projeto-ToDo-back/compare/v1.1.2...v1.1.3) (2025-06-09)
+
+
+### Bug Fixes
+
+* Finalizando o README com o comando para rodar o projeto e subindo o docker-compose.yml para rodar tudo. ([1af7648](https://github.com/Brabodopedro/Projeto-ToDo-back/commit/1af76481d471acc3c0c54d5a938b2f028bd87fec))
+
 ## [1.1.2](https://github.com/Brabodopedro/Projeto-ToDo-back/compare/v1.1.1...v1.1.2) (2025-06-09)
 
 
