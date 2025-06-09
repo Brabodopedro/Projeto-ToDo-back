@@ -1,3 +1,11 @@
+## [1.3.2](https://github.com/Brabodopedro/Projeto-ToDo-back/compare/v1.3.1...v1.3.2) (2025-06-09)
+
+
+### Bug Fixes
+
+* Arrumando codigo por os .env nao estava no codigo, agora esta e arrumado. ([431911a](https://github.com/Brabodopedro/Projeto-ToDo-back/commit/431911ad8c2969013e622e78d9af47b4a372c205))
+* Arrumando codigo por os .env nao estava no codigo, agora esta e arrumado. ([1fe4981](https://github.com/Brabodopedro/Projeto-ToDo-back/commit/1fe49810af96c2576b889dad9e35c543c0cb8b54))
+
 ## [1.3.1](https://github.com/Brabodopedro/Projeto-ToDo-back/compare/v1.3.0...v1.3.1) (2025-06-09)
 
 
