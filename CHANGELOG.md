@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/Brabodopedro/Projeto-ToDo-back/compare/v1.3.0...v1.3.1) (2025-06-09)
+
+
+### Bug Fixes
+
+* Arrumando imagens do docker para rodar correto. ([1f74f3a](https://github.com/Brabodopedro/Projeto-ToDo-back/commit/1f74f3aa490176e34bbcd7a45a1d49a285fcd14e))
+
 # [1.3.0](https://github.com/Brabodopedro/Projeto-ToDo-back/compare/v1.2.0...v1.3.0) (2025-06-09)
 
 
