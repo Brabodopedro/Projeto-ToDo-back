@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/Brabodopedro/Projeto-ToDo-back/compare/v1.1.1...v1.1.2) (2025-06-09)
+
+
+### Bug Fixes
+
+* Adicionando os arquivos do docker para poder ter acesso as imagens e rodar de qualquer computador. ([6fe86b1](https://github.com/Brabodopedro/Projeto-ToDo-back/commit/6fe86b1a6c23e8e86ddbd4c6293699ccf79b81bd))
+
 ## [1.1.1](https://github.com/Brabodopedro/Projeto-ToDo-back/compare/v1.1.0...v1.1.1) (2025-06-08)
 
 
