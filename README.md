@@ -17,8 +17,8 @@ Este repositório contém a API do sistema de gerenciamento de tarefas desenvolv
 ## 🚀 Como Rodar com Docker
 
 1. Crie uma pasta No computador;
-2. Clone este repositório e o front-end (`Projeto-ToDo-front`).
-3. Na pasta criado, mova o dentro do back `docker-compose.yml`.
+2. Clone este repositório e o back-end (`Projeto-ToDo-back`).
+3. Na pasta criado, mova arquivo o dentro do back `docker-compose.yml`.
 4. Execute:
 
 ```bash
