@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/Brabodopedro/Projeto-ToDo-back/compare/v1.2.0...v1.3.0) (2025-06-09)
+
+
+### Features
+
+* Arrumando erro do nome do banco q eu esqueci de mudar ([d146f89](https://github.com/Brabodopedro/Projeto-ToDo-back/commit/d146f893a256a26f7d7a1a8301a7f5114238a459))
+
 # [1.2.0](https://github.com/Brabodopedro/Projeto-ToDo-back/compare/v1.1.3...v1.2.0) (2025-06-09)
 
 
