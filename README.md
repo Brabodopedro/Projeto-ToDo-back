@@ -1,120 +1,64 @@
-# Task Manager API (Laravel 10 + JWT)
+# Projeto ToDo - Backend (Laravel)
 
-API para gerenciamento de tarefas com autenticação JWT, documentação Swagger e integração com front-end React.
+Este repositório contém a API do sistema de gerenciamento de tarefas desenvolvido com Laravel 10, MySQL e autenticação via JWT.
 
-## 🔧 Tecnologias
+---
+
+## ⚙️ Tecnologias e Ferramentas
 
 - Laravel 10
-- MySQL
-- JWT Auth (`tymon/jwt-auth`)
-- L5 Swagger
-- Docker (opcional)
-- GitHub Actions + semantic-release (CI/CD)
+- MySQL 8
+- JWT Auth (tymon/jwt-auth)
+- Swagger (l5-swagger)
+- Docker + Docker Compose
 
 ---
 
-## 📂 Estrutura de Diretórios
+## 🚀 COMO RODAR O PROJETO COM DOCKER
 
-- `app/Http/Controllers`: Controladores (AuthController, TaskController)
-- `app/Http/Requests`: Validação (LoginRequest, RegisterRequest, TaskStoreRequest, TaskUpdateRequest)
-- `app/Models`: Modelos (User, Task)
-- `routes/api.php`: Rotas da API
-- `docs`: Documentação gerada pelo Swagger
+> ⚠️ IMPORTANTE: Este repositório assume que o arquivo `docker-compose.yml` está dentro da pasta `Projeto-ToDo-back`.
 
----
+1. Clone **este repositório** e o front-end (`https://github.com/Brabodopedro/Projeto-ToDo-front`) lado a lado na mesma estrutura:
 
-## 🔐 Autenticação
-
-Autenticação via JWT. Após login, um token é retornado e deve ser usado no header:
-
-```http
-Authorization: Bearer {token}
+```
+alguma-pasta/
+├── Projeto-ToDo-back/         <- Este repositório (com o docker-compose.yml dentro)
+├── Projeto-ToDo-front/        <- Repositório do front-end (clone separado)
 ```
 
----
-
-## 🔁 Rotas da API
-
-| Método | Endpoint         | Middleware     | Descrição                    |
-|--------|------------------|----------------|------------------------------|
-| POST   | `/api/register`  | guest          | Cadastro de usuário          |
-| POST   | `/api/login`     | guest          | Login e retorno de token     |
-| GET    | `/api/me`        | auth:api       | Retorna usuário autenticado  |
-| POST   | `/api/logout`    | auth:api       | Logout                       |
-| GET    | `/api/tasks`     | auth:api       | Listar tarefas do usuário    |
-| POST   | `/api/tasks`     | auth:api       | Criar nova tarefa            |
-| PUT    | `/api/tasks/{id}`| auth:api       | Atualizar tarefa             |
-| DELETE | `/api/tasks/{id}`| auth:api       | Excluir tarefa               |
-
----
-
-## 🧪 Testando com Postman
-
-1. Registrar: `POST /api/register`
-2. Login: `POST /api/login`
-3. Copiar token do response e usar como `Bearer Token`
-4. Testar rotas protegidas com o token.
-
----
-
-## 📄 Documentação Swagger
-
-Acesse em:  
-```
-http://localhost:8000/api/documentation
-```
-
-Comando para regenerar:
+2. Navegue até a pasta `Projeto-ToDo-back`:
 ```bash
-php artisan l5-swagger:generate
+cd Projeto-ToDo-back
 ```
 
----
-
-## 🚀 CI/CD
-
-- Automatizado com GitHub Actions.
-- Versionamento com `semantic-release`.
-- Publicação ocorre a cada merge na branch `main`.
-
----
-
-## 🗃️ Banco de Dados
-
-Tabela `users`:
-- id
-- name
-- email
-- password
-
-Tabela `tasks`:
-- id
-- user_id
-- title
-- description
-- due_date
-- status
-
----
-
-## 📦 Instalação
-
+3. Execute:
 ```bash
-git clone https://github.com/seu-usuario/task-manager-api.git
-cd task-manager-api
-composer install
-cp .env.example .env
-php artisan key:generate
-php artisan migrate
-php artisan serve
+docker compose up --build
 ```
+
+4. Acesse:
+- API Laravel: [http://localhost:8000/api](http://localhost:8000/api)
+- Frontend React: [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## 📌 Observações
+## 🔐 Autenticação JWT
 
-- Todas as requisições protegidas requerem token JWT.
-- Uso de `FormRequest` para validação.
-- Documentação atualizada automaticamente com o Swagger.
-- Repositorio do Front: https://github.com/Brabodopedro/Projeto-ToDo-front
+- `POST /api/login`
+- `GET /api/tasks` (requer `Authorization: Bearer TOKEN`)
+- `POST /api/register`
 
+---
+
+## 📚 Documentação da API
+
+[http://localhost:8000/api/documentation](http://localhost:8000/api/documentation)
+
+---
+
+## ✅ Funcionalidades
+
+- Autenticação JWT
+- CRUD de tarefas com status (pendente, concluído, cancelado)
+- Middleware de proteção
+- Documentação Swagger
