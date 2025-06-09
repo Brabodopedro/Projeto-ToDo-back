@@ -27,13 +27,10 @@ COPY .env .env
 # Copiar projeto
 COPY . .
 
-# Permissões
-RUN chown -R www-data:www-data /var/www && chmod -R 755 /var/www
-
 # Script de entrada
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 ENTRYPOINT ["docker-entrypoint.sh"]
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
 
-CMD ["php-fpm"]

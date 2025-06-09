@@ -1,23 +1,37 @@
 #!/bin/bash
 
-# Esperar MySQL ficar disponível
+set -e  # Faz o script parar se qualquer comando falhar
+
+echo "🔄 Aguardando MySQL..."
 until nc -z db 3306; do
-  echo "Aguardando MySQL..."
   sleep 2
 done
 
-# Adiciona uma pausa extra de segurança
-sleep 5
+echo "✅ MySQL disponível, iniciando setup..."
+sleep 3
 
-composer install
-php artisan key:generate
+# Garantir que dependências estão instaladas
+if [ ! -d "vendor" ]; then
+  composer install
+fi
 
-# tenta migrar até conseguir (máximo 10 tentativas)
+# Garante que a key só é gerada uma vez
+if [ ! -f .env ]; then
+  cp .env.example .env
+fi
+
+php artisan key:generate || true
+
+# Executar migrações com seed, ignorando erro se já existir
 for i in {1..10}; do
-  php artisan migrate --seed && break || {
-    echo "Tentativa $i falhou, aguardando..."
+  if php artisan migrate --seed; then
+    echo "✅ Migração completa."
+    break
+  else
+    echo "⚠️ Tentativa $i falhou, aguardando..."
     sleep 3
-  }
+  fi
 done
 
+# Rodar o CMD do Dockerfile
 exec "$@"
