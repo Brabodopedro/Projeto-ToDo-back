@@ -14,51 +14,65 @@ Este repositório contém a API do sistema de gerenciamento de tarefas desenvolv
 
 ---
 
-## 🚀 COMO RODAR O PROJETO COM DOCKER
+## 🚀 Como Rodar com Docker
 
-> ⚠️ IMPORTANTE: Este repositório assume que o arquivo `docker-compose.yml` está dentro da pasta `Projeto-ToDo-back`.
-
-1. Clone **este repositório** e o front-end (`https://github.com/Brabodopedro/Projeto-ToDo-front`) lado a lado na mesma estrutura:
-
-```
-alguma-pasta/
-├── Projeto-ToDo-back/         <- Este repositório (com o docker-compose.yml dentro)
-├── Projeto-ToDo-front/        <- Repositório do front-end (clone separado)
-```
-
-2. Navegue até a pasta `Projeto-ToDo-back`:
-```bash
-cd Projeto-ToDo-back
-```
-
+1. Clone este repositório e o front-end (`Projeto-ToDo-front`).
+2. Vá até a raiz onde está o `docker-compose.yml`.
 3. Execute:
+
 ```bash
 docker compose up --build
 ```
 
-4. Acesse:
-- API Laravel: [http://localhost:8000/api](http://localhost:8000/api)
-- Frontend React: [http://localhost:3000](http://localhost:3000)
+4. Acesse a API: `http://localhost:8000/api`
 
 ---
 
 ## 🔐 Autenticação JWT
 
-- `POST /api/login`
-- `GET /api/tasks` (requer `Authorization: Bearer TOKEN`)
-- `POST /api/register`
+- **Rota de login**: `POST /api/login`
+- **Rota protegida**: `GET /api/tasks` (necessário header `Authorization: Bearer TOKEN`)
+- **Rota de registro**: `POST /api/register`
 
 ---
 
 ## 📚 Documentação da API
 
-[http://localhost:8000/api/documentation](http://localhost:8000/api/documentation)
+Acesse:  
+```
+http://localhost:8000/api/documentation
+```
+
+---
+
+## 📂 Estrutura de Diretórios
+
+- `app/Models`: Modelos Eloquent
+- `app/Http/Controllers/Api`: Controladores da API
+- `app/Http/Requests`: Validações com FormRequest
+- `routes/api.php`: Definição das rotas da API
+
+---
+
+## 🧪 Testes com Postman
+
+- Login
+- Registro
+- Listagem de tarefas
+- Criação, edição, exclusão e alteração de status
 
 ---
 
 ## ✅ Funcionalidades
 
-- Autenticação JWT
-- CRUD de tarefas com status (pendente, concluído, cancelado)
-- Middleware de proteção
+- Autenticação com JWT
+- CRUD completo de tarefas
+- Filtro por status (pendente, concluído, cancelado)
+- Proteção de rotas via middleware
 - Documentação Swagger
+
+---
+
+## 📄 Licença
+
+MIT
