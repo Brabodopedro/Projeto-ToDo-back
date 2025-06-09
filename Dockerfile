@@ -21,6 +21,9 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Diretório de trabalho
 WORKDIR /var/www
 
+# Copiar .env ANTES do restante
+COPY .env .env
+
 # Copiar projeto
 COPY . .
 
